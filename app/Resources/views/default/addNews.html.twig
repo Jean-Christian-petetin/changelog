@@ -1,0 +1,11 @@
+{% extends "template.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+    Ajout News
+{% endblock %}
+
+{% block body %}
+    {{ form_start(formAddNews,{'attr':{'action':path('valid')}})}}
+    {{ form_end(formAddNews)}}
+{% endblock %}

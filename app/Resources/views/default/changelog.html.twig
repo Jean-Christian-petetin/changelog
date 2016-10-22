@@ -1,0 +1,21 @@
+{% extends "template.html.twig" %}
+
+{% block title %}
+    {{ parent() }}
+    News
+{% endblock %}
+
+{% block body %}
+    {# on crée une zone pour pouvoir y mettre nos news #}
+    {% for news in varNews %} {# pour chaque instance news crée avec la variable #}
+        <div class="contenant">
+            <button class="toggle"><h3>{{ news.titre }}</h3></button>
+            <div class="contenu">
+                <p>{{ news.message }}</p>
+                <p>{{ news.auteur }}</p>
+                <p>{{ news.date }}</p>
+                {#<p><a href="{{ path('suprNews',{'id':news.id})}}">Delete</a></p>#}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

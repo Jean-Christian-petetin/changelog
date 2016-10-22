@@ -1,0 +1,37 @@
+nav{
+    
+    .navPc{
+        display: block;
+    }
+
+    .navPhone{
+        display: none;
+    }
+    
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: $couleurSecondaire;
+
+    :hover{
+        background-color: $couleurPrimaire;
+    }
+        
+        li{
+            display: inline-block;
+            padding: 5px 10px;
+        
+           
+            
+            a{
+                color: $couleurTexte2;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Changelog - {% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+            <link rel="stylesheet"  media="screen and (min-width: 481px)" href="{{asset('css/mainPc.css')}}"/>
+            <link rel="stylesheet"  media="screen and (max-width: 480px)" href="{{asset('css/mainPhone.css')}}"/>
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <header>
+            <h1>Changelog</h1>
+        </header>
+        
+        <nav>
+            <div class="navPc">
+                <ul>
+{#                    <li><a href="{{ path('accueil')}}"><i class="fa fa-home"></i></a></li>#}
+                    <li><a href="{{ path('accueil')}}">Accueil</a></li>
+                    <li><a href="{{ path('changelog')}}">News</a></li>
+                    <li><a href="{{ path('admin')}}">Admin</a></li>
+                </ul>
+            </div>
+                
+            <div class="navPhone">
+                <ul>
+                    <li><a href="{{ path('accueil')}}"><i class="fa fa-home"></i></a></li>
+                    <li><a href="{{ path('changelog')}}"><i class="fa fa-newspaper-o"></i></i></a></li>
+                    <li><a href="{{ path('admin')}}"><i class="fa fa-user-secret"></i></a></li>
+
+                </ul>
+            </div>     
+        </nav>
+        {% block body %}{% endblock %}
+        {% block javascripts %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script type="text/javascript" src="{{ asset('js/toggleNews.js')}}"></script>
+        {% endblock %}
+    </body>
+</html>
